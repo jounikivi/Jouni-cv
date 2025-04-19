@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def etusivu(request):
+    return render(request, 'cv/etusivu.html', {})
