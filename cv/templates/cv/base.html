@@ -1,25 +1,28 @@
-<!DOCTYPE html>
-<html lang="fi">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Jounin CV-sivusto{% endblock %}</title>
-</head>
-<body>
-    <header>
-        <h1>Jounin CV</h1>
-        <nav>
-            <!-- Tänne tulee navigaatio myöhemmin -->
-        </nav>
-    </header>
-
-    <main>
-        {% block content %}
-        <!-- Sivukohtainen sisältö tänne -->
-        {% endblock %}
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Jouni Kiviperä</p>
-    </footer>
-</body>
-</html>
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="https://via.placeholder.com/40" alt="Profiilikuva" class="rounded-circle me-2">
+        <strong>Jouni Kiviperä</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#tietoa">Tietoa minusta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tyokokemus">Työkokemus</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#koulutus">Koulutus</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#taidot">Taidot</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
