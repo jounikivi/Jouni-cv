@@ -1,40 +1,63 @@
+/* ====== YLEISET ASETUKSET ====== */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
+  background-color: #000; /* Musta tausta */
+  color: #f2f2f2; /* Vaalea teksti */
 }
 
 h1, h2, h3 {
   font-weight: 600;
+  color: #f9c700; /* Keltainen otsikko */
+}
+
+/* ====== NAVIGAATIO ====== */
+.navbar {
+  background-color: #000 !important; /* Musta yläpalkki */
+  border-bottom: 1px solid #222;
 }
 
 .navbar-brand strong {
   font-size: 1.3rem;
+  color: #f9c700; /* Keltainen nimi */
 }
 
+.navbar .nav-link {
+  color: #f2f2f2 !important; /* Navigaatio vaaleana */
+}
+
+.navbar .nav-link.active {
+  font-weight: 600;
+  color: #f9c700 !important; /* Aktiivinen linkki korostettuna */
+}
+
+/* ====== SISÄLLÖN RAKENNE ====== */
 section {
-  padding: 3rem 0;
+  padding: 3rem 0; /* Tilaa osioiden väliin */
 }
 
 .bg-highlight {
-  background-color: #e9f1ff;
+  background-color: #111; /* Hieman vaaleampi tausta */
   border-radius: 10px;
   padding: 2rem;
+  color: #ddd; /* Kirkkaampi teksti tummalla taustalla */
 }
 
 .card-style {
-  background: white;
+  background: #1a1a1a; /* Kortin tausta mustanharmaa */
   padding: 1.5rem;
   border-radius: 0.75rem;
-  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.7);
   margin-bottom: 1rem;
+  color: #f2f2f2; /* Kortin teksti */
+  border-left: 5px solid #f9c700; /* Keltainen korostereuna */
 }
 
-/* Taitojen ikonityyli */
+/* ====== TAITOIKONIT ====== */
 .skill-icon {
   width: 80px;
   height: 80px;
-  background-color: #e2ecfa;
-  color: #0d6efd;
+  background-color: #f9c700; /* Keltainen ympyrä */
+  color: #000; /* Musta ikoni */
   font-size: 2rem;
   border-radius: 50%;
   display: inline-flex;
@@ -46,11 +69,32 @@ section {
 .skill-label {
   font-weight: 500;
   font-size: 1rem;
+  color: #f2f2f2; /* Valkoinen teksti */
 }
 
-/* Navigaation korostus aktiiviselle linkille */
-.navbar .nav-link.active {
-  font-weight: 600;
-  color: #0d6efd !important;
+/* ====== FOOTER ====== */
+footer {
+  background-color: #000 !important; /* Musta footer */
+  color: #f2f2f2; /* Vaalea teksti */
+  border-top: 1px solid #222;
+  padding: 2rem 0;
 }
-/* Responsiivisuus */
+
+footer a {
+  color: #f9c700; /* Linkki keltaisella */
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline; /* Hover-korostus */
+}
+
+/* ====== HERO PARANNUS ====== */
+.bg-light {
+  background-color: #111 !important; /* Tumma hero-osio */
+  color: #f9c700; /* Keltainen otsikko */
+}
+
+.bg-light .lead {
+  color: #dddddd; /* Selkeämmin luettava vaalea teksti */
+}
