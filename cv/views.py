@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def etusivu(request):
-    return render(request, 'cv/etusivu.html', {})
+def home(request):
+    return render(request, 'cv/home.html', {})

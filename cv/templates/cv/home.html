@@ -1,0 +1,92 @@
+{% extends 'cv/base.html' %}
+
+{% block title %}Etusivu - Jounin CV{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="text-center py-5 bg-light rounded shadow-sm mb-5">
+    <h1 class="display-4 fw-bold">Tervetuloa Jounin CV-sivustolle!</h1>
+    <p class="lead mt-3">
+        Olen tietojenkäsittelyn opiskelija ja ohjelmistokehittäjä, jolla on intohimo käytännön projekteihin, moderniin teknologiaan ja halu auttaa muita IT-ongelmissa.
+    </p>
+</section>
+
+<!-- Tietoa minusta -->
+<section id="tietoa" class="mb-5">
+    <div class="card-style text-center">
+        <h2 class="mb-4">Tietoa minusta</h2>
+        <p class="lead">[Paikkateksti: Lyhyt esittely itsestäsi tulee tähän]</p>
+    </div>
+</section>
+
+<!-- Työkokemus -->
+<section id="tyokokemus" class="mb-5">
+    <div class="text-center mb-4">
+        <h2 class="text-white py-2 px-4 rounded bg-primary d-inline-block">Työkokemus</h2>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-3 mx-2 card-style text-center">
+            <h5>Ohjelmistokehittäjä</h5>
+            <p class="text-muted">2019–present</p>
+        </div>
+        <div class="col-md-3 mx-2 card-style text-center">
+            <h5>Järjestelmäasiantuntija</h5>
+            <p class="text-muted">2017–2019</p>
+        </div>
+    </div>
+</section>
+
+<!-- Koulutus -->
+<section id="koulutus" class="mb-5">
+    <div class="text-center mb-4">
+        <h2 class="mb-4">Koulutus</h2>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-3 mx-2 card-style text-center">
+            <h5>Tietojenkäsittelyn tutkinto</h5>
+            <p class="text-muted">Turun ammattikorkeakoulu<br>2014–2017</p>
+        </div>
+        <div class="col-md-3 mx-2 card-style text-center">
+            <h5>Luonnontieteiden kandidaatti</h5>
+            <p class="text-muted">Yliopisto<br>2011–2014</p>
+        </div>
+    </div>
+</section>
+
+<!-- Taidot -->
+<section id="taidot" class="mb-5">
+    <div class="card-style text-center">
+        <h2 class="mb-4">Taidot</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+                <div class="skill-icon mx-auto">🌐</div>
+                <div class="skill-label">HTML</div>
+            </div>
+            <div class="col-md-2">
+                <div class="skill-icon mx-auto">⚙️</div>
+                <div class="skill-label">Programming</div>
+            </div>
+            <div class="col-md-2">
+                <div class="skill-icon mx-auto">💄️</div>
+                <div class="skill-label">Database</div>
+            </div>
+            <div class="col-md-2">
+                <div class="skill-icon mx-auto">🖥️</div>
+                <div class="skill-label">UI/UX</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Yhteystiedot -->
+<section id="yhteystiedot" class="text-center border-top pt-4 mt-5">
+    <div class="card-style">
+        <h2 class="mb-4">Yhteystiedot</h2>
+        <p class="lead">
+            <i class="bi bi-envelope"></i> <a href="mailto:email@jouni.kivipera">email@jouni.kivipera</a>
+        </p>
+    </div>
+</section>
+
+{% endblock %}
