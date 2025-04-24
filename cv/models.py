@@ -6,6 +6,9 @@ class TietojaMinusta(models.Model):
   kuvaus = models.TextField()
   kuva = models.ImageField(upload_to='kuvat/')
   
+  def __str__(self):
+    return self.otsikko
+  
   
 class Tyokokemus(models.Model):
     yritys = models.CharField(max_length=100)
@@ -14,13 +17,22 @@ class Tyokokemus(models.Model):
     alkupvm = models.DateField()
     loppupvm = models.DateField()
     
+    def __str__(self):
+        return f"{self.tehtava} at {self.yritys}"
+    
 class Koulutus(models.Model):
     oppilaitos = models.CharField(max_length=100)
     tutkinto = models.CharField(max_length=100)
     kuvaus = models.TextField()
     aloitusvuosi = models.DateField()
     valmistumisvuosi = models.DateField()
+    
+    def __str__(self):
+        return f"{self.tutkinto} at {self.oppilaitos}"
 
 class Taidot(models.Model):
     taido = models.CharField(max_length=100)
-    taso = models.CharField(max_length=100)
+    taso = models.IntegerField(choices=[(i, f"{i}/5") for i in range(1, 6)])
+    
+    def __str__(self):
+        return f"{self.taido} {self.taso}"
