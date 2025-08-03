@@ -1,16 +1,14 @@
 from datetime import date
 import tempfile
 
-from django.conf import settings
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase, override_settings
 from django.urls import reverse
 
 from .models import Koulutus, Taidot, TietojaMinusta, Tyokokemus
 
-settings.SECRET_KEY = "test-secret-key"
 
-
+@override_settings(SECRET_KEY="test-secret-key")
 class ModelStringRepresentationTests(TestCase):
     """Ensure __str__ methods return expected strings."""
 
@@ -49,7 +47,7 @@ GIF_BYTES = (
 )
 
 
-@override_settings(MEDIA_ROOT=tempfile.gettempdir())
+@override_settings(MEDIA_ROOT=tempfile.gettempdir(), SECRET_KEY="test-secret-key")
 class HomeViewTests(TestCase):
     """Verify context and response of the home view."""
 
