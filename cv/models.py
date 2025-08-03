@@ -15,7 +15,7 @@ class Tyokokemus(models.Model):
     tehtava = models.CharField(max_length=100)
     kuvaus = models.TextField()
     alkupvm = models.DateField()
-    loppupvm = models.DateField()
+    loppupvm = models.DateField(blank=True, null=True)
     
     def __str__(self):
         return f"{self.tehtava} at {self.yritys}"
@@ -25,7 +25,7 @@ class Koulutus(models.Model):
     tutkinto = models.CharField(max_length=100)
     kuvaus = models.TextField()
     aloitusvuosi = models.DateField()
-    valmistumisvuosi = models.DateField()
+    valmistumisvuosi = models.DateField(blank=True, null=True)
     
     def __str__(self):
         return f"{self.tutkinto} at {self.oppilaitos}"
