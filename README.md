@@ -14,9 +14,11 @@ Jouni CV is a small Django project that powers a personal curriculum vitae websi
    ```bash
    pip install -r requirements.txt
    ```
-4. **Create a `.env` file** with at least the following value:
+4. **Create a `.env` file** with environment variables:
    ```env
-   SECRET_KEY=your_django_secret_key
+   SECRET_KEY=your_django_secret_key    # required
+   DEBUG=False                          # optional, defaults to False
+   ALLOWED_HOSTS=localhost,127.0.0.1    # optional, comma-separated
    ```
 5. **Apply database migrations**
    ```bash
