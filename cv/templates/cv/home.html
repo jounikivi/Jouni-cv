@@ -42,14 +42,12 @@
         <h2 class="py-2 px-4 rounded d-inline-block text-warning">Koulutus</h2>
     </div>
     <div class="row justify-content-center">
+        {% for koulutus in koulutukset %}
         <div class="col-md-3 mx-2 card-style text-center">
-            <h5>Tietojenkäsittelyn tutkinto</h5>
-            <p class="text-muted">Turun ammattikorkeakoulu<br>2014–2017</p>
+            <h5>{{ koulutus.tutkinto }}</h5>
+            <p class="text-muted">{{ koulutus.oppilaitos }}<br>{{ koulutus.aloitusvuosi|date:"Y" }}–{{ koulutus.valmistumisvuosi|date:"Y" }}</p>
         </div>
-        <div class="col-md-3 mx-2 card-style text-center">
-            <h5>Luonnontieteiden kandidaatti</h5>
-            <p class="text-muted">Yliopisto<br>2011–2014</p>
-        </div>
+        {% endfor %}
     </div>
 </section>
 
@@ -61,22 +59,12 @@
 
     <div class="card-style text-center">
         <div class="row justify-content-center">
+            {% for taito in taidot %}
             <div class="col-md-2">
-                <div class="skill-icon mx-auto">📝</div>
-                <div class="skill-label">taito1</div>
+                <div class="skill-icon mx-auto">{{ taito.taso }}</div>
+                <div class="skill-label">{{ taito.taido }}</div>
             </div>
-            <div class="col-md-2">
-                <div class="skill-icon mx-auto">⚙️</div>
-                <div class="skill-label">taito2</div>
-            </div>
-            <div class="col-md-2">
-                <div class="skill-icon mx-auto">📊</div>
-                <div class="skill-label">taito3</div>
-            </div>
-            <div class="col-md-2">
-                <div class="skill-icon mx-auto">🖥️</div>
-                <div class="skill-label">taito4</div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
