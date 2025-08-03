@@ -7,10 +7,14 @@ def home(request):
     tyokokemukset = Tyokokemus.objects.all().order_by('-alkupvm')
     koulutukset = Koulutus.objects.all().order_by('-aloitusvuosi')
     taidot = Taidot.objects.all().order_by('-taso')
-    return render(request, 'cv/home.html', {
-        'tietoa': tietoa,
+
+    context = {
         'tyokokemukset': tyokokemukset,
         'koulutukset': koulutukset,
         'taidot': taidot,
-    })
+    }
+    if tietoa is not None:
+        context['tietoa'] = tietoa
+
+    return render(request, 'cv/home.html', context)
 
