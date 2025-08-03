@@ -31,8 +31,8 @@ class Koulutus(models.Model):
         return f"{self.tutkinto} at {self.oppilaitos}"
 
 class Taidot(models.Model):
-    taido = models.CharField(max_length=100)
+    taito = models.CharField(max_length=100)
     taso = models.IntegerField(choices=[(i, f"{i}/5") for i in range(1, 6)])
-    
+
     def __str__(self):
-        return f"{self.taido} {self.taso}"
+        return f"{self.taito} {self.taso}"
