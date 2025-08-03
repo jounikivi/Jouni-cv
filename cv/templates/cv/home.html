@@ -32,7 +32,7 @@
     {% for tyok in tyokokemukset %}
       <div class="card-style mb-3">
         <h4>{{ tyok.tehtava }} – {{ tyok.yritys }}</h4>
-        <p class="text-muted">{{ tyok.alkupvm|date:"F Y" }} – {% if tyok.loppupvm %}{{ tyok.loppupvm|date:"F Y" }}{% else %}nykyhetki{% endif %}</p>
+        <p class="text-muted-light">{{ tyok.alkupvm|date:"F Y" }} – {% if tyok.loppupvm %}{{ tyok.loppupvm|date:"F Y" }}{% else %}nykyhetki{% endif %}</p>
         <p>{{ tyok.kuvaus }}</p>
       </div>
     {% endfor %}
@@ -47,7 +47,7 @@
         {% for koulutus in koulutukset %}
         <div class="col-md-3 mx-2 card-style text-center">
             <h5>{{ koulutus.tutkinto }}</h5>
-            <p class="text-muted">{{ koulutus.oppilaitos }}<br>{{ koulutus.aloitusvuosi|date:"Y" }}–{% if koulutus.valmistumisvuosi %}{{ koulutus.valmistumisvuosi|date:"Y" }}{% else %}nykyhetki{% endif %}</p>
+            <p class="text-muted-light">{{ koulutus.oppilaitos }}<br>{{ koulutus.aloitusvuosi|date:"Y" }}–{% if koulutus.valmistumisvuosi %}{{ koulutus.valmistumisvuosi|date:"Y" }}{% else %}nykyhetki{% endif %}</p>
         </div>
         {% endfor %}
     </div>
